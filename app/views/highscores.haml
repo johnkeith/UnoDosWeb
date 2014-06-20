@@ -1,0 +1,33 @@
+.main-container
+  %h1.inst_title
+    .extra-text High scores for 
+    .letter1 u
+    .letter2 n
+    .letter3 o
+    .letter4 d
+    .letter5 o
+    .letter6 s
+  .play-button
+    %a.animate{:href => "/game"} Play Again >>
+  %table.scores-table.pure-table.pure-table-horizontal
+    %thead
+      %tr
+        %td Rank
+        %td Player Name
+        %td Score
+    %tbody
+      - @scores.each_with_index do |score, index|
+        %tr
+          %td.table_anim= index + 1
+          %td.table_anim= score.player_name
+          %td.table_anim= score.score
+  / %ol.scores-table
+  /   - @scores.each do |score|
+  /     %li= score.player_name
+  /     %li= score.score
+%script{:src => "jquery.textillate.js"}
+%script{:src => "assets/jquery.lettering.js"}
+%script{:src => "assets/jquery.fittext.js"}
+:javascript
+  $(".animate").textillate({in: { effect: 'fadeInDown' }, loop: false, initialDelay: 4});
+  $(".table_anim").textillate({in: { effect: 'bounceInUp' }, loop: false, shuffle: true, initialDelay: 9});

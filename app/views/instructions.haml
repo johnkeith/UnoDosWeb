@@ -1,0 +1,35 @@
+
+.main-container
+  %h1.inst_title
+    .extra-text Welcome to
+    .letter1 u
+    .letter2 n
+    .letter3 o
+    .letter4 d
+    .letter5 o
+    .letter6 s
+  .play-button
+    %a.animate{:href => "/game"} Play Game >>
+  %h3 
+    %em ~ El Mejor Juego Del Mundo ~ 
+  %p Señor John Keith & Señor David Pointeau
+  %p
+    %strong unodos instructions
+  %p unodos is a unique game which combines strategy, fast-thinking, and fun! In a rapidly evolving interface, your goal is to get the words 'UNO' or 'DOS' as many times as possible before the board fills up... Every 3 seconds, a new random tile is added to the board. Watch out, each time you successfully get 'UNO' or 'DOS', those three letters disappear and the pace at which tiles are added increases! Try to get as many 'UNO's and 'DOS's as you can before the board fills up!
+  %p
+    %strong What's On Your Screen:
+  %p + Above the board on the top left is your score. 
+  %p + Above the board on the top right are the next five letters that are going to be added to the board. The underlined letter is the one that's going to be placed randomly on the board next.
+  %p+ Under the board is the timer. It speeds up as you progress through the game.
+  %p 
+    %strong How To Play:
+  %p In unodos, all the power is at the tip of your fingers... Move your mouse around the board and click on one of the 4 sides of a tile to move it. As your mouse hovers over one of those sides, it changes to a shade of grey. 
+  %p
+    %strong Example of Moving and Scoring: 
+  .gif-centered
+    %img{:src => "unodos_tut.gif"}
+%script{:src => "jquery.textillate.js"}
+%script{:src => "assets/jquery.lettering.js"}
+%script{:src => "assets/jquery.fittext.js"}
+:javascript
+  $(".animate").textillate({in: { effect: 'fadeInDown' }, loop: false, initialDelay: 4});
