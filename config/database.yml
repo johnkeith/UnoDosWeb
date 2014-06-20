@@ -11,3 +11,9 @@ test:
   encoding: unicode
   database: unodos_test
   pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: unodos_prod
+  pool: 5
