@@ -1,0 +1,28 @@
+.main-container
+  .title
+    .letter1 u
+    .letter2 n
+    .letter3 o
+    .letter4 d
+    .letter5 o
+    .letter6 s
+  .score-upcoming
+    .score-container
+    .upcoming-container
+  .board-container
+  .timer-container
+    .timer-box-01
+    .timer-box-02
+    .timer-box-03
+  .score-form
+    .score-form-header
+    %form{:method => 'post', :action => '/game', :id => "score-form"}
+      %input{:name => "player_name", :type => "hidden", :value => "", :id => "player-name"}
+      %input{:name => "score", :type => "hidden", :value => "", :id => "score"}
+      = "<input name='address_in_memory' type='hidden' value='#{@address_in_memory}' />"
+      %input{:type => "submit", :value => "Post Score"}
+%script{:src => "jquery.color-2.1.2.min.js"}
+%script{:src => "board.js"}
+%script{:src => "tile.js"}
+%script{:src => "game.js"}
+
