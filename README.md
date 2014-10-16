@@ -1,6 +1,6 @@
 UnoDosWeb
 =========
-LINK HERE : www.unodos.herokuapp.com
+LINK HERE : http://unodos.herokuapp.com/
 
 ![Alt Text](/unodos_var/welcome.png)
 
